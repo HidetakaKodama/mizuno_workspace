@@ -1,0 +1,22 @@
+package e4_6;
+
+public class WhileSample2 {
+	public static void main(String[] args) {
+		do {
+			System.out.println(i);
+			i++;
+		} while(i < 3);
+	}
+}
+
+/*
+
+エラーコード
+Exception in thread "main" java.lang.Error: Unresolved compilation problems:
+	i を変数に解決できません
+	i を変数に解決できません
+	i を変数に解決できません
+
+	at WhilSample1.main(WhilSample1.java:5)
+
+*/
