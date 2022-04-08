@@ -1,5 +1,10 @@
 package e4_6;
 
+/**
+ * 
+ * @author WEBEDGE
+ *
+ */
 public class WhileSample2 {
 	public static void main(String[] args) {
 		do {
