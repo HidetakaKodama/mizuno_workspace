@@ -1,6 +1,5 @@
 package Ex5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex5_B1 {
@@ -9,11 +8,15 @@ public class Ex5_B1 {
 		int num = s.nextInt();
 
 		int[] scores = {88,55,77,99,66};
-		if(Arrays.asList(num).contains(88)){
+		for(int j = 0; j < scores.length; j++) {
+		for(int i = 0; i < 1; i++){
+		if(scores[i] == num){
 			System.out.println("見つかりました");
 		} else {
 			System.out.println("見つかりませんでした");
 		}
 
 	}
+}
+}
 }

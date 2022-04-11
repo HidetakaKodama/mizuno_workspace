@@ -2,34 +2,19 @@ package Ex6;
 
 public class Ex6_B2 {
 	public static void main(String[] args) {
-		int x;
-		int y;
-		if (numArray[0] > numArray[1]) {
-			x = numArray[0];
-			y = numArray[1];
-		} else {
-			x = numArray[1];
-			y = numArray[0];
-		}
-
-		int tmp;
-		while ((tmp = x % y) ! = 0) {
-			x = y;
-			y = tmp;
-		}
-
-		System.out.println(y);
+		int m = 80;
+		int n = 40;
+		int a = gcd(m,n);
+		System.out.print(a);
 	}
 
-	private static String[] getSplitLine(Syring line) {
-		return line.split("\\s");
-	}
-
-	private static int[] parseInt(String[] line) {
-		int[] numArray = new int[line.length];
-		for (int i= 0; i < line.length; i++) {
-				numArray[i] = Integer.parseInt(line[i]);
+	public static int gcd(int m, int n) {
+		int r;
+		while( n > 0) {
+			r = m % n;
+			m = n;
+			n = r;
 		}
-		return numArray;
+		return m;
 	}
 }
