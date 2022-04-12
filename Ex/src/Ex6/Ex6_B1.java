@@ -2,20 +2,24 @@ package Ex6;
 
 public class Ex6_B1 {
 	public static void main(String[] args) {
-
-		int num1 = 3;
-		int num2 = 5;
-		int result = add(num1,num2);
-		System.out.print("*");
+		rectangle1(3);
+		rectangle2(5);
 	}
-	public static int add(int x,int y) {
-		for (int i = 0; i < x; i++) {
-			for (int j = 0; j < y; j++) {
+
+	public static void rectangle1(int v) {
+		for (int i = 0; i < v; i++) {
+			System.out.print("*");
+
 		}
 	}
-}
-}
+	public static void rectangle2(int b) {
+		for (int j = 0; j < b; j++) {
+				System.out.println("*");
+	}
+		System.out.println();
+	}
 
+}
 //		int vertical = 5;
 //		int beside = 3;
 //		int rectangle = add(vertical,beside);
