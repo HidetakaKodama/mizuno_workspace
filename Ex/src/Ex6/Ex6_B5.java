@@ -8,15 +8,36 @@ package Ex6;
 
 public class Ex6_B5 {
 	public static void main(String[] args) {
-	int num[] = {10,20,30};
-	int total = num[0];
-	System.out.print(total);
-}
-	public static int total(int num[]) {
-		int total = num[0];
-		for (int i = 0; i < num.length; i++) {
-			total = total + num[i];
-		}
-		return total;
+		int[] array = {10,20,30};
+		int sum = sumOf(array);
+		System.out.println(sum);
 	}
-}
+	public static int sumOf(int[] a) {
+		int sum = 0;
+		for (int e:a)
+			sum += e;
+		return sum;
+	}
+	}
+
+//		int[] num = {10,20,30};
+//		totalnum (num);
+//	}
+//	static void totalnum(int[] num) {
+//		for (int i = 0; i < num.length; i++) {
+//			int sum = 0;
+//			sum += num[i];
+//		}
+//	}
+//}
+
+//	int num[] = {10,20,30};
+//	int total = num[0];
+//	System.out.print(total);
+//}
+//	public static int total(int num[]) {
+//		int total = num[0];
+//		for (int i = 0; i < num.length; i++) {
+//			total = total + num[i];
+//		}
+//		return total;

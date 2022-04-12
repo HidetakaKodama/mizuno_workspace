@@ -8,19 +8,31 @@ package Ex6;
 
 public class Ex6_B4 {
 	public static void main(String[] args) {
-		int[] data = {10,20,30};
-		int m = data [0];
-		System.out.print(m);
+		int[] array = {10,20,30};
+		int max = maxOf(array);
+		System.out.println(max);
 	}
-
-	public static int m(int data[]) {
-		int m = Integer.MIN_VALUE;
-		for(int i = 0; i < data.length; i++) {
-			m = data[i] > m ? data[i] : m;
-		}
-		return m;
+	static int maxOf(int[] a) {
+		int max = a[0];
+		for (int e:a)
+			if(max < e)
+				max = e;
+		return max;
 	}
-}
+	}
+//		int[] data = {10,20,30};
+//		int m = data [0];
+//		System.out.print(m);
+//	}
+//
+//	public static int m(int data[]) {
+//		int m = Integer.MIN_VALUE;
+//		for(int i = 0; i < data.length; i++) {
+//			m = data[i] > m ? data[i] : m;
+//		}
+//		return m;
+//	}
+//}
 
 //		int[] a = {20,30};
 //		int getMax = a[0];
