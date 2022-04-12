@@ -10,14 +10,14 @@ package Ex6;
 
 public class Ex6_B3 {
 	public static void main(String[] args) {
-	int m = 1860;
+	int m = 1912;
 	int a = meiji(m);
 	System.out.print("入力した文字：" + a);
 }
 
 	public static int meiji(int m) {
 		int i = m;
-		boolean r = (i < 1912) && (1868 < i);
+		boolean r = (i <= 1912) && (1868 <= i);
 		if(r) {
 			System.out.println("true");
 		} else {
