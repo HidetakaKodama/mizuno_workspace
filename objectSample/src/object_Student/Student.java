@@ -8,4 +8,5 @@ public class Student {
 			System.out.println("学籍番号=" + id);
 			System.out.println("氏名=" + name);
 		}
+
 	}
