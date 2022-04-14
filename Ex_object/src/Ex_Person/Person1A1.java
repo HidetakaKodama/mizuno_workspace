@@ -11,13 +11,12 @@ public class Person1A1 {
 	    }
 
 		void getOlder(int years) {
-			age = age + years;
+			age += years;
 			System.out.println("【" + years + "年後】");
-//			System.out.println("私は" + name + "です。");
 		}
 
 		void alcohol() {;
-			if (18 <= age) {
+			if (20 <= age) {
 				System.out.println("飲酒できる年齢です。");
 			} else {
 				System.out.println("まだ飲酒できる年齢ではありません。");

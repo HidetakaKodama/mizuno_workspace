@@ -15,7 +15,7 @@ public class Person1A2 {
 	}
 
 	void getOlder(int years) {
-		age = age + years;
+		age += years;
 		System.out.println("【" + years + "年後】");
 	}
 }
