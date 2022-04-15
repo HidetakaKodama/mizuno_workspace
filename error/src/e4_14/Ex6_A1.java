@@ -10,12 +10,19 @@ public class Ex6_A1 {
 	public static void main(String[] args) {
 		introduce("鈴木",20,55.5);
 		introduce("山田",45,65.8);
-		introduce("佐藤",30,46.1);
+		introduce("佐藤",30);
 	}
-	public static void introduce(String name,int age,) {
+	public static void introduce(String name,int age) {
+		System.out.println( name + "さんは" + age + "歳、体重は測定していません。" );
+	}
+
+	public static void introduce(String name,int age,double weight) {
 		System.out.println( name + "さんは" + age + "歳、体重は" + weight + "kgです。");
 	}
+
 }
+
+
 
 /*
   エラーコード
@@ -27,7 +34,7 @@ public class Ex6_A1 {
 	at Ex6.Ex6_A1.main(Ex6_A1.java:5)
 
 	エラー内容
-	引数の中の体重が引数に適応できない。
+	引数の中の体重がメソッドに適応できない。
 
 	解決方法
 	15行目のメソッドをしっかり書く。
