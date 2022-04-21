@@ -1,0 +1,40 @@
+2-A6
+3テーブル全て結合し、SEX_NAME='FEMALE'のものを表示する。
+
+select * from
+account_table
+left join prefecture_table
+on
+account_table.id = prefecture_table.id
+left join sex_table
+on
+prefecture_table.id = sex_table.id
+
+select * from account_table
+where sex_name = 'FEMALE';
+
+【静的解析】
+この種類の句は以前に解釈済みです。 (near "select" at position 165)
+
+【SQLクエリ】
+select * from account_table left join prefecture_table on account_table.id = prefecture_table.id left join sex_table on prefecture_table.id = sex_table.id
+select * from account_table where sex_name = 'FEMALE'; 
+
+【MySQLのメッセージ】
+#1064 - SQL構文エラーです。バージョンに対応するマニュアルを参照して正しい構文を確認してください。 : 'select * from account_table
+where sex_name = 'FEMALE'' 付近 10 行目
+
+【解決方法】
+select * from account_table
+を削除する。
+
+select * from
+account_table
+left join prefecture_table
+on
+account_table.id = prefecture_table.id
+left join sex_table
+on
+prefecture_table.id = sex_table.id
+
+where sex_name = 'FEMALE';
