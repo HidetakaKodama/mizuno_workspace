@@ -1,0 +1,20 @@
+select name
+from city
+where countrycode = 'JPN'
+and
+like '%aki%';
+
+2-B7
+日本の都市で名前に「aki」が含むものを表示する
+
+【MySQLのメッセージ】
+#1064 - SQL構文エラーです。バージョンに対応するマニュアルを参照して正しい構文を確認してください。 : 'like '%aki%' LIMIT 0, 25' 付近 5 行目
+
+【解決方法】
+likeの前に列名を忘れずに書く
+
+select name
+from city
+where countrycode = 'JPN'
+and name
+like '%aki%';
