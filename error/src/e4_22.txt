@@ -1,0 +1,26 @@
+select count(name)
+,district
+from city
+where countrycode = 'JPN'
+and
+group by
+district
+having count(name) >= 3
+order by
+count(name) desc,
+population desc;
+
+2-B16
+日本の県で、県に存在する都市の数が3以上の県だけを表示し、
+都市数の多い順、県合計人口の多い順に表示する。
+
+【MySQLのメッセージ】
+#1064 - SQL構文エラーです。バージョンに対応するマニュアルを参照して正しい構文を確認してください。 : 'group by
+district
+having count(name) >= 3
+order by
+count(name) desc,
+pop...' 付近 6 行目
+
+【解決方法】
+5行目のandを削除する。
