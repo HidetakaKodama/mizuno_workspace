@@ -12,6 +12,5 @@ public class ListEx3 {
 
 		System.out.println("え→ゑに置き換えます");
 
-		String str = list.replace("え","ゑ");
 	}
 }
