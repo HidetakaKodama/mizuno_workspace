@@ -1,0 +1,24 @@
+select name,population
+where district = 'tokyo-to'
+and
+population >= 200000
+from city;
+
+2-B9
+東京都の人口20万人以上の都市を、名前、人口だけ表示する。
+
+【静的解析】
+解析中に 1 個のエラーが見つかりました。
+予期しない節の順序。 (near "where" at position 24)
+
+【MySQLのメッセージ】
+#1064 - SQL構文エラーです。
+バージョンに対応するマニュアルを参照して正しい構文を確認してください。
+ : 'from city' 付近 5 行目
+
+【解決したコード】
+select name,population
+from city
+where district = 'tokyo-to'
+and
+population >= 200000;
