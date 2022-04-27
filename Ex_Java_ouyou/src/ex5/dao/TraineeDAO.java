@@ -17,23 +17,33 @@ public class TraineeDAO {
 		Trainee trainee = null;
 		try {
 			Connection con = DriverManager.getConnection(url,user,password);
-			PreparedStatement pstmt = con.prepareStatement("SELECT trainee.id,trainee.name,trainee.age,trainee.sex,unit.unit_id,company.co_id FROM trainee,unit,company WHERE trainee.unit_id = unit.unit_id AND trainee.co_id = company.co_id AND id = ?");
+			PreparedStatement pstmt = con.prepareStatement("select id,name,age,sex,unit_id,co_id from trainee where id = ?");
+			    pstmt.setInt(1,id);
+			    ResultSet rs = pstmt.executeQuery();
+			    if(rs.next()) {
+			    	trainee = new Trainee();
+			    	trainee.setId(rs.getInt("id"));
+			    	trainee.setName(rs.getString("name"));
+			    	trainee.setAge(rs.getInt("age"));
+			    	trainee.setSex(rs.getString("sex"));
+			    	trainee.setCoId(rs.getInt("co_id"));
+}
+} catch (SQLException e) {
+	e.printStackTrace();
+}
+		return trainee;
+}
+
+	public int deleteById(int id) {
+		int result = -1;
+		try {
+			Connection con = DriverManager.getConnection(url,user,password);
+			PreparedStatement pstmt = con.prepareStatement("DELETE FROM trainee where id = ?");
 			pstmt.setInt(1, id);
-			ResultSet rs = pstmt.executeQuery();
-			if(rs.next()) {
-				trainee = new Trainee();
-				trainee.setId(rs.getInt("id"));
-				trainee.setName(rs.getString("name"));
-				trainee.setAge(rs.getInt("age"));
-				trainee.setSex(rs.getString("sex"));
-				trainee.setUnitId(rs.getInt("unitId"));
-				trainee.setCoId(rs.getInt("coId"));
-
-
-			}
+			result = pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
-		return trainee;
+		return result;
 	}
 }
