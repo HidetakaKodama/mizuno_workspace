@@ -21,8 +21,8 @@ public class MemberDao {
 
 	public Member searchById(int id) {
 		Member member = null;
-		String sql = "SELECT id,name,age,address,password"
-				+ "FROM member WHERE id = ?";
+		String sql = "select id,name,age,address,password"
+				+ "from member where id = ?";
 		try(Connection con = getConnection(); PreparedStatement
 		pstmt = con.prepareStatement(sql);){
 			pstmt.setInt(1, id);
