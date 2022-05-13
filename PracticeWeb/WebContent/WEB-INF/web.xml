@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>PracticeWeb</display-name>
   <servlet>
     <servlet-name>CountDownServlet</servlet-name>
@@ -24,5 +24,36 @@
   <servlet-mapping>
     <servlet-name>MultipleServlet</servlet-name>
     <url-pattern>/MultipleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ScoreServlet</servlet-name>
+    <servlet-class>ScoreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScoreServlet</servlet-name>
+    <url-pattern>/ScoreServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>scorefilter</filter-name>
+    <filter-class>scorefilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>scorefilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+  </jsp-config>
+
+    <servlet>
+    <servlet-name>ReminderServlet</servlet-name>
+    <servlet-class>ReminderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReminderServlet</servlet-name>
+    <url-pattern>/ReminderServlet</url-pattern>
   </servlet-mapping>
 </web-app>
