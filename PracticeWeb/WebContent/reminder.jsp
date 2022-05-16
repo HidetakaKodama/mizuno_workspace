@@ -7,19 +7,14 @@
 <title>結果～</title>
 </head>
 <body>
-<%
-String int1 = (String) request.getAttribute("int1");
+<%=request.getAttribute("int1")
 %>
-<%
-String int2 = (String) request.getAttribute("int2");
-%>
-<%
-String result = (String) request.getAttribute("result");
-%>
-<%=int1 %>
 %
-<%=int2 %>
+<%=request.getAttribute("int2")
+%>
 =
-<%=result %>
+<%=request.getAttribute("resultNum")
+%>
+
 </body>
 </html>

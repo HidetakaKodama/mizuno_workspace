@@ -47,8 +47,7 @@
       <page-encoding>UTF-8</page-encoding>
     </jsp-property-group>
   </jsp-config>
-
-    <servlet>
+  <servlet>
     <servlet-name>ReminderServlet</servlet-name>
     <servlet-class>ReminderServlet</servlet-class>
   </servlet>
@@ -56,4 +55,36 @@
     <servlet-name>ReminderServlet</servlet-name>
     <url-pattern>/ReminderServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>RegistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/RegistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddToDoServlet</servlet-name>
+    <servlet-class>AddToDoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddToDoServlet</servlet-name>
+    <url-pattern>/AddToDoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ResetToDoServlet</servlet-name>
+    <servlet-class>ResetToDoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetToDoServlet</servlet-name>
+    <url-pattern>/ResetToDoServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>PracticeFilterServlet</filter-name>
+    <filter-class>PracticeFilterServlet</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PracticeFilterServlet</filter-name>
+    <url-pattern>/PracticeFilter</url-pattern>
+  </filter-mapping>
 </web-app>

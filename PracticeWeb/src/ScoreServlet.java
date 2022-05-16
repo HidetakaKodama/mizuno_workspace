@@ -1,7 +1,6 @@
 
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,8 +14,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/ScoreServlet")
 public class ScoreServlet extends HttpServlet {
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
+//		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
 		String result = request.getParameter("score");
 		response.setContentType("text/html;charset=UTF-8");
