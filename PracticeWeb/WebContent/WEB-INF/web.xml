@@ -87,4 +87,12 @@
     <filter-name>PracticeFilterServlet</filter-name>
     <url-pattern>/PracticeFilter</url-pattern>
   </filter-mapping>
+  <servlet>
+  <servlet-name>PopulationSearchServlet</servlet-name>
+  <servlet-class>PopulationSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>PopulationSearchServlet</servlet-name>
+  <url-pattern>/PopulationSearchServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
